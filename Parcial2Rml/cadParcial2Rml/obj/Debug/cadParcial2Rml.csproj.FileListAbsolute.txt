@@ -1,0 +1,12 @@
+E:\SIS457\parcial2_rml\Parcial2Rml\cadParcial2Rml\bin\Debug\cadParcial2Rml.dll.config
+E:\SIS457\parcial2_rml\Parcial2Rml\cadParcial2Rml\bin\Debug\cadParcial2Rml.dll
+E:\SIS457\parcial2_rml\Parcial2Rml\cadParcial2Rml\bin\Debug\cadParcial2Rml.pdb
+E:\SIS457\parcial2_rml\Parcial2Rml\cadParcial2Rml\bin\Debug\EntityFramework.dll
+E:\SIS457\parcial2_rml\Parcial2Rml\cadParcial2Rml\bin\Debug\EntityFramework.SqlServer.dll
+E:\SIS457\parcial2_rml\Parcial2Rml\cadParcial2Rml\bin\Debug\EntityFramework.xml
+E:\SIS457\parcial2_rml\Parcial2Rml\cadParcial2Rml\bin\Debug\EntityFramework.SqlServer.xml
+E:\SIS457\parcial2_rml\Parcial2Rml\cadParcial2Rml\obj\Debug\cadParcial2Rml.csproj.AssemblyReference.cache
+E:\SIS457\parcial2_rml\Parcial2Rml\cadParcial2Rml\obj\Debug\cadParcial2Rml.csproj.CoreCompileInputs.cache
+E:\SIS457\parcial2_rml\Parcial2Rml\cadParcial2Rml\obj\Debug\cadParci.ABE98A8C.Up2Date
+E:\SIS457\parcial2_rml\Parcial2Rml\cadParcial2Rml\obj\Debug\cadParcial2Rml.dll
+E:\SIS457\parcial2_rml\Parcial2Rml\cadParcial2Rml\obj\Debug\cadParcial2Rml.pdb
