@@ -14,6 +14,8 @@ namespace cadParcial2Rml
     
     public partial class Serie
     {
+        public object urltrailer;
+
         public int id { get; set; }
         public string titulo { get; set; }
         public string sinopsis { get; set; }

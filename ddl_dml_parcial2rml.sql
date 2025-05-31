@@ -24,6 +24,7 @@ CREATE TABLE Serie (
     director VARCHAR(100) NOT NULL,
     episodios INT NOT NULL,
     fechaEstreno DATE NOT NULL DEFAULT GETDATE(),
+    urltrailer NVARCHAR(500) NOT NULL,
     estado SMALLINT NOT NULL DEFAULT 1 -- -1:Eliminado, 0: Inactivo, 1: Activo;
 );
 GO
@@ -39,11 +40,11 @@ EXEC paSerieListar ' The Crown ';
 
 
 
-INSERT INTO Serie (titulo, sinopsis, director, episodios, fechaEstreno)
+INSERT INTO Serie (titulo, sinopsis, director, episodios, fechaEstreno, urltrailer)
 VALUES
-('Two and a Half', 'Un hombre soltero cría a su sobrino y a su hermano.', 'Chuck Lorre, Lee Aronsohn', 262, '2003-09-22'),
-('The Crown', 'La vida de la Reina Isabel II y los eventos que moldearon su reinado.', 'Peter Morgan', 60, '2016-11-04');
-
+('The Crown', 'Una serie que narra la vida de la reina Isabel II y los eventos que marcaron su reinado.', 'Peter Morgan', 40, '2016-11-04', 'https://www.youtube.com/watch?v=JWn8K2c4g0A'),
+('Breaking Bad', 'Un profesor de química se convierte en fabricante de metanfetaminas para asegurar el futuro financiero de su familia.', 'Vince Gilligan', 62, '2008-01-20', 'https://www.youtube.com/watch?v=HhesaQXLuRY'),
+('Game of Thrones', 'Una épica serie de fantasía basada en las novelas de George R.R. Martin, llena de intrigas políticas y batallas por el trono.', 'David Benioff, D.B. Weiss', 73, '2011-04-17', 'https://www.youtube.com/watch?v=s7L2PVdrb_8');
 
 SELECT * FROM Serie;
 

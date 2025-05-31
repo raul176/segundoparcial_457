@@ -31,6 +31,11 @@ namespace CpParcial2Rml
             dgvLista.Columns["director"].HeaderText = "Director";
             dgvLista.Columns["episodios"].HeaderText = "Episodios";
             dgvLista.Columns["fechaEstreno"].HeaderText = "Fecha de Estreno";
+
+         
+
+
+
             if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["titulo"];
         }
 
@@ -47,6 +52,7 @@ namespace CpParcial2Rml
             txtDirector.Text = string.Empty;
             nudEpisodios.Value = 0;
             dtpFechaEstreno.Value = dtpFechaEstreno.MinDate;
+            txturltrailer.Text = string.Empty;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -75,6 +81,7 @@ namespace CpParcial2Rml
             txtDirector.Text = serie.director;
             nudEpisodios.Text = serie.episodios.ToString();
             dtpFechaEstreno.Value = serie.fechaEstreno;
+            txturltrailer.Text = (string)serie.urltrailer;
         }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -99,6 +106,7 @@ namespace CpParcial2Rml
             erpDirector.SetError(txtDirector, "");
             erpEpisodios.SetError(nudEpisodios, "");
             erpFechaEstreno.SetError(dtpFechaEstreno, "");
+           
 
             if (string.IsNullOrEmpty(txtTitulo.Text))
             {
@@ -130,6 +138,14 @@ namespace CpParcial2Rml
                 esValido = false;
                 erpFechaEstreno.SetError(dtpFechaEstreno, "El campo Fecha de Estreno es obligatorio");
             }
+            if (dtpFechaEstreno.Value > DateTime.Now)
+            {
+                esValido = false;
+                erpFechaEstreno.SetError(dtpFechaEstreno, "La Fecha de Estreno no puede ser mayor a la fecha actual");
+            }
+
+
+
             return esValido;
         }
 
@@ -143,6 +159,7 @@ namespace CpParcial2Rml
                 serie.director = txtDirector.Text.Trim();
                 serie.episodios = (int)nudEpisodios.Value;
                 serie.fechaEstreno = dtpFechaEstreno.Value;
+                serie.urltrailer = txturltrailer.Text.Trim();
 
                 if (esNuevo)
                 {
@@ -177,6 +194,11 @@ namespace CpParcial2Rml
                 MessageBox.Show("Serie dado de baja correctamente", "::: Parcial2 - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

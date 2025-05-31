@@ -29,6 +29,7 @@ namespace ClnParcial2Rml
                 existente.director = serie.director;
                 existente.episodios = serie.episodios;
                 existente.fechaEstreno = serie.fechaEstreno;
+                existente.urltrailer = serie.urltrailer;
                 return context.SaveChanges();
             }
         }

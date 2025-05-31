@@ -35,6 +35,7 @@
             this.erpEpisodios = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpTitulo = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbxDatos = new System.Windows.Forms.GroupBox();
+            this.txtSinopsis = new System.Windows.Forms.TextBox();
             this.dtpFechaEstreno = new System.Windows.Forms.DateTimePicker();
             this.txtDirector = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -56,7 +57,8 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.txtSinopsis = new System.Windows.Forms.TextBox();
+            this.lblurltrailer = new System.Windows.Forms.Label();
+            this.txturltrailer = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.erpSinopsis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpFechaEstreno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDirector)).BeginInit();
@@ -90,6 +92,8 @@
             // 
             // gbxDatos
             // 
+            this.gbxDatos.Controls.Add(this.txturltrailer);
+            this.gbxDatos.Controls.Add(this.lblurltrailer);
             this.gbxDatos.Controls.Add(this.txtSinopsis);
             this.gbxDatos.Controls.Add(this.dtpFechaEstreno);
             this.gbxDatos.Controls.Add(this.txtDirector);
@@ -111,6 +115,14 @@
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos";
             // 
+            // txtSinopsis
+            // 
+            this.txtSinopsis.Location = new System.Drawing.Point(92, 48);
+            this.txtSinopsis.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSinopsis.Name = "txtSinopsis";
+            this.txtSinopsis.Size = new System.Drawing.Size(180, 20);
+            this.txtSinopsis.TabIndex = 17;
+            // 
             // dtpFechaEstreno
             // 
             this.dtpFechaEstreno.Location = new System.Drawing.Point(396, 41);
@@ -118,7 +130,7 @@
             this.dtpFechaEstreno.Name = "dtpFechaEstreno";
             this.dtpFechaEstreno.Size = new System.Drawing.Size(182, 20);
             this.dtpFechaEstreno.TabIndex = 11;
-            this.dtpFechaEstreno.Value = new System.DateTime(2024, 6, 3, 0, 0, 0, 0);
+            this.dtpFechaEstreno.Value = new System.DateTime(2025, 5, 31, 9, 51, 50, 0);
             // 
             // txtDirector
             // 
@@ -151,6 +163,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // nudEpisodios
             // 
@@ -330,7 +343,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -344,18 +357,29 @@
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
-            // txtSinopsis
+            // lblurltrailer
             // 
-            this.txtSinopsis.Location = new System.Drawing.Point(92, 48);
-            this.txtSinopsis.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSinopsis.Name = "txtSinopsis";
-            this.txtSinopsis.Size = new System.Drawing.Size(180, 20);
-            this.txtSinopsis.TabIndex = 17;
+            this.lblurltrailer.AutoSize = true;
+            this.lblurltrailer.Location = new System.Drawing.Point(313, 88);
+            this.lblurltrailer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblurltrailer.Name = "lblurltrailer";
+            this.lblurltrailer.Size = new System.Drawing.Size(70, 13);
+            this.lblurltrailer.TabIndex = 18;
+            this.lblurltrailer.Text = "Url de Trailer:";
+            // 
+            // txturltrailer
+            // 
+            this.txturltrailer.Location = new System.Drawing.Point(387, 88);
+            this.txturltrailer.Margin = new System.Windows.Forms.Padding(2);
+            this.txturltrailer.Name = "txturltrailer";
+            this.txturltrailer.Size = new System.Drawing.Size(180, 20);
+            this.txturltrailer.TabIndex = 19;
             // 
             // FrmSerie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.RosyBrown;
             this.ClientSize = new System.Drawing.Size(829, 448);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.btnSalir);
@@ -415,6 +439,8 @@
         private System.Windows.Forms.ErrorProvider erpEpisodios;
         private System.Windows.Forms.ErrorProvider erpTitulo;
         private System.Windows.Forms.TextBox txtSinopsis;
+        private System.Windows.Forms.Label lblurltrailer;
+        private System.Windows.Forms.TextBox txturltrailer;
     }
 }
 
